@@ -14,6 +14,11 @@ public class Layer {
         int objectsIndex = str.indexOf("objects");
         int endIndex = str.lastIndexOf("}");
 
+        if(str.contains("groups")){
+        	int groupsIndex = str.indexOf("groups");
+        	parseObjects(str.substring(groupsIndex + 8, endIndex - 1));
+        }
+        
         parseObjects(str.substring(objectsIndex + 9, endIndex - 1));
     }
 
