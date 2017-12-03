@@ -6,7 +6,6 @@ public class Group extends GraphicsObject {
 
     public Group() {
         m_objectList = new Vector<GraphicsObject>();
-        m_ID = ID.generateID();
     }
 
     public Group(String json) {
@@ -39,8 +38,8 @@ public class Group extends GraphicsObject {
         return g;
     }
 
-    public int getID() {
-        return m_ID;
+    public Vector<GraphicsObject> get_m_objectList(){
+    	return m_objectList;
     }
 
     @Override
